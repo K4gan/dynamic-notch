@@ -1,0 +1,25 @@
+name: DynamicNotch
+options:
+  bundleIdPrefix: com.dynamicnotch
+  deploymentTarget:
+    macOS: "12.0"
+  developmentLanguage: tr
+targets:
+  DynamicNotch:
+    type: application
+    platform: macOS
+    sources:
+      - path: .
+        excludes:
+          - "*.yml"
+          - "*.md"
+          - "Package.swift"
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.dynamicnotch.app
+      INFOPLIST_FILE: Info.plist
+      SWIFT_VERSION: "5.0"
+      MACOSX_DEPLOYMENT_TARGET: "12.0"
+      CODE_SIGN_IDENTITY: "-"
+      CODE_SIGNING_REQUIRED: NO
+      CODE_SIGNING_ALLOWED: NO
+
